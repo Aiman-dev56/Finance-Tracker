@@ -25,5 +25,21 @@ CREATE TABLE transactions(
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+INSERT INTO transactions(
+    user_id,
+    type,
+    title,
+    amount,
+    category,
+    payment_method,
+    transaction_date,
+    notes
+)
+
+VALUES (
+    $1, $2, $3, $4, $5, $6, $7, $8
+)
+RETURNING *;
+
 CREATE INDEX idx_transactions_user_date 
 ON transactions(user_id, transaction_date DESC);
