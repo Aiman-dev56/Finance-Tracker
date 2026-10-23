@@ -43,3 +43,51 @@ RETURNING *;
 
 CREATE INDEX idx_transactions_user_date 
 ON transactions(user_id, transaction_date DESC);
+
+UPDATE transactions
+SET title = $1
+WHERE id = $2 AND user_id = $3
+RETURNING *;
+
+DELETE FROM transactions 
+WHERE id = $1 AND user_id = $2
+RETURNING id;
+
+SELECT 
+COALESCE(
+    SUM(amount) FILTER (WHERE type = 'income'), 0
+) AS total_income,
+
+COALESCE(
+    SUM(amount) FILTER (WHERE type = 'expense'), 0
+) AS total_expenses,
+
+COALESCE(
+    SUM(
+        CASE
+        WHEN type = 'income' THEN amount
+        ELSE -amount
+        END
+    ), 0
+) AS net_balance
+
+FROM transactions
+WHERE user_id = $1;
+
+
+SELECT 
+DATE_TRUNC('month', transaction_date)::date AS month,
+
+COALESCE(
+    SUM(amount) FILTER (WHERE type = 'income'), 0
+) AS income,
+
+COALESCE(
+    SUM(amount) FILTER (WHERE type = 'expense'), 0
+) AS expenses
+
+FROM transactions
+ WHERE user_id = $1
+GROUP BY DATE_TRUNC('month', transaction_date)
+ORDER BY month;
+
