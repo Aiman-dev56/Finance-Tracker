@@ -91,3 +91,20 @@ FROM transactions
 GROUP BY DATE_TRUNC('month', transaction_date)
 ORDER BY month;
 
+
+
+-- expense by category
+SELECT 
+category,
+SUM(amount) AS total
+
+FROM transactions
+WHERE user_id = $1
+AND type = 'expense'
+AND transaction_date >= $2::date
+AND transaction_date < $3::date
+
+GROUP B category
+ORDER BY SUM(amount) DESC;
+
+
