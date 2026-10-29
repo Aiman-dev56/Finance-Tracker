@@ -9,8 +9,8 @@ const links = [
 
 export default function Sidebar({onLogout}) {
     return(
-        <aside className="sidebar">
-            <div className="brand">
+        <aside className="flex w-full shrink-0 flex-col border-b border-style-200 bg-white p-4 md:fixed md:inset-y-0 md:z-20 md:w-64 md:border-rmd:p-6">
+            <div className="mb-6 flex items-center gap-3 md:mb-12">
                 <div className="brand-icon">
                     <Wallet size={23}/>
 
