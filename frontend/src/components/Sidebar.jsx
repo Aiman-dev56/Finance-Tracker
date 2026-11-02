@@ -32,12 +32,17 @@ export default function Sidebar({onLogout}) {
                         isActive ? "bg-blue-50 text-brand" : "text-slate-500 hover:bg-slate-50 hover:text-slate-900"
                     }`}
                     >
-                        <Icon />
+                        <Icon size={19} />
+                        <span>{label}</span>
                         </NavLink>
 
                 ))}
 
             </nav>
+
+            <div className="mt-5 md:mt-auto">
+
+            </div>
 
         </aside>
     )
