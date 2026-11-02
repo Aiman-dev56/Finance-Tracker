@@ -31,7 +31,10 @@ export default function Sidebar({onLogout}) {
                     `flex items-center justify-center gap-2 rounded-xl px-3 py-3 text=xs font-semibold transition md:justify-start md:gap-3 md:text-sm ${
                         isActive ? "bg-blue-50 text-brand" : "text-slate-500 hover:bg-slate-50 hover:text-slate-900"
                     }`}
-                    />
+                    >
+                        <Icon />
+                        </NavLink>
+
                 ))}
 
             </nav>
