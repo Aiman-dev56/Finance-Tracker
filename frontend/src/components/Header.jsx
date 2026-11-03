@@ -13,7 +13,11 @@ export default function Header({ title, user }) {
           {title}
         </h1>
       </div>
-      <div></div>
+      <div className="flexx items-center gap-4">
+        <div className="hidden items-center gap-2 text-xs texxt-slate-500 sm:flex">
+          <CalenderDays size={17} />
+        </div>
+      </div>
     </header>
   );
 }
