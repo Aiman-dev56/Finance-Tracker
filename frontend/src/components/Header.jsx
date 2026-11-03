@@ -29,6 +29,9 @@ export default function Header({ title, user }) {
         >
           <Bell size={19} />
         </button>
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 font-bold text-brand">
+          {name.charAt(0).toUpperCase()}
+        </div>
       </div>
     </header>
   );
