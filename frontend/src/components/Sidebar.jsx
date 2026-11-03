@@ -50,6 +50,12 @@ export default function Sidebar({onLogout}) {
                     </p>
 
                 </div>
+                <button onClick={onLogout}
+                className="flex w-full items-center justify-center gap-2 rounded-xl px-4 py-4 text-sm font-semibold text-slate-500 transition hover:bg-rose-50 hover:text-rose-600 md:justify-center md:gap-4">
+                    <Logout  size={19}/>
+                    Logout
+
+                </button>
 
             </div>
 
