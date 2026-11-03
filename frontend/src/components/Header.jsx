@@ -32,6 +32,9 @@ export default function Header({ title, user }) {
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 font-bold text-brand">
           {name.charAt(0).toUpperCase()}
         </div>
+        <span className="hidden text-sm font-semibold text-slate-700 lg:inline">
+          {name}
+        </span>
       </div>
     </header>
   );
