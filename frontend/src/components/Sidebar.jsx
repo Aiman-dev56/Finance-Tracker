@@ -42,8 +42,11 @@ export default function Sidebar({onLogout}) {
 
             <div className="mt-5 md:mt-auto">
                 <div className="mb-4 hidden rounded-2xl border border-blue-100 bg-blue-50 p-4 md:block">
-                    <p>
-                        
+                    <p className="mb-2 text-sm font-bold text-slate-800">
+                        Smart money habits 
+                    </p>
+                    <p className="text-xs leading-6 text-slate-500">
+                        Track your spending and build better financial habits.
                     </p>
 
                 </div>
