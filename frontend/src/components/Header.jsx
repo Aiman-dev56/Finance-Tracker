@@ -16,7 +16,19 @@ export default function Header({ title, user }) {
       <div className="flexx items-center gap-4">
         <div className="hidden items-center gap-2 text-xs texxt-slate-500 sm:flex">
           <CalenderDays size={17} />
+          {new Date().toLocaleDateString("en-PK", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
         </div>
+        <button
+          type="button"
+          aria-label="Notifications"
+          className="hidden h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500  transition hover:bg-slate-50 sm:flex"
+        >
+          <Bell size={19} />
+        </button>
       </div>
     </header>
   );
