@@ -41,6 +41,12 @@ export default function Sidebar({onLogout}) {
             </nav>
 
             <div className="mt-5 md:mt-auto">
+                <div className="mb-4 hidden rounded-2xl border border-blue-100 bg-blue-50 p-4 md:block">
+                    <p>
+                        
+                    </p>
+
+                </div>
 
             </div>
 
