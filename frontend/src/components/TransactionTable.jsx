@@ -28,6 +28,10 @@ export default function TransactionTable({
         <thead>
           <tr className="bg-slate-50 text-xs font-semibold text-slate-500">
             <th className="px-4 py-4">Transaction</th>
+            <th className="px-4 py-4">Category</th>
+            <th className="px-4 py-4">Date</th>
+            <th className="px-4 py-4">Amount</th>
+            {showActions && <th className="px-4 py-4">Actions</th>}
           </tr>
         </thead>
       </table>
