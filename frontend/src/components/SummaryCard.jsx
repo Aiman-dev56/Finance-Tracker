@@ -24,6 +24,14 @@ export default function SummaryCard({
         <span className="text-xs font-semibold text-slate-500 md:text-sm">
           {title}
         </span>
+
+        {Icon && (
+          <div
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${colors[color] || colors.blue}`}
+          >
+            <Icon size={22} />
+          </div>
+        )}
       </div>
     </article>
   );
