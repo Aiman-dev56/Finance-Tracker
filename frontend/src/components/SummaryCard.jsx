@@ -33,6 +33,14 @@ export default function SummaryCard({
           </div>
         )}
       </div>
+
+      <h2 className="mb-2 break-words font-heading text-xl font-extrabold tracking-tight text-slate-900 md:text-2xl">
+        {formattedAmount}
+      </h2>
+
+      <p className="text-xs leading-5 text-slate-400">
+        {description || "Your Financial Overview"}
+      </p>
     </article>
   );
 }
