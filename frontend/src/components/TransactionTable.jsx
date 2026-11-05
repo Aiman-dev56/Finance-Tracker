@@ -37,6 +37,17 @@ export default function TransactionTable({
         <tbody className="divide-y divide-slate-100">
           {transactions.map((transaction) => {
             const income = transaction.type === "income";
+
+            return (
+              <tr
+                key={transaction.id}
+                className="transition hover:bg-slate-50/80"
+              >
+                <td className="pxx-4 py-4">
+                  <div></div>
+                </td>
+              </tr>
+            );
           })}
         </tbody>
       </table>
