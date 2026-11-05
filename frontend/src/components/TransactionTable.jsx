@@ -34,6 +34,11 @@ export default function TransactionTable({
             {showActions && <th className="px-4 py-4">Actions</th>}
           </tr>
         </thead>
+        <tbody className="divide-y divide-slate-100">
+          {transactions.map((transaction) => {
+            const income = transaction.type === "income";
+          })}
+        </tbody>
       </table>
     </div>
   );
