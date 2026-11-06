@@ -43,8 +43,12 @@ export default function TransactionTable({
                 key={transaction.id}
                 className="transition hover:bg-slate-50/80"
               >
-                <td className="pxx-4 py-4">
-                  <div></div>
+                <td className="px-4 py-4">
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`h-2.5 w-2.5 shrink-0 rounded-full ${income ? "bg-emerald-500" : "bg-rose-500"}`}
+                    />
+                  </div>
                 </td>
               </tr>
             );
