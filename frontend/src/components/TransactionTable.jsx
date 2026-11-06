@@ -73,6 +73,28 @@ export default function TransactionTable({
                       })
                     : "_"}
                 </td>
+
+                <td
+                  className={`whitespace-nowrap px-4 py-4 text-sm font-bold ${
+                    income ? "text-emerald-600" : "text-rose-600"
+                  }`}
+                >
+                  {income ? "+" : "-"}
+                  {currency.format(Number(transaction.amount) || 0)}
+                </td>
+                {showActions && (
+                  <td className="px-4 py-4">
+                    <button
+                      type="button"
+                      title="Delete transaction"
+                      aria-label={`Delete ${transaction.title}`}
+                      onClick={() => onDelete?.(transaction.id)}
+                      className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition hover:border-rose-200 hover:bg-rose-50 hover:text-rose-600"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </td>
+                )}
               </tr>
             );
           })}
