@@ -48,6 +48,14 @@ export default function TransactionTable({
                     <span
                       className={`h-2.5 w-2.5 shrink-0 rounded-full ${income ? "bg-emerald-500" : "bg-rose-500"}`}
                     />
+                    <div>
+                      <p className="text-sm font-semibold text-slate-800">
+                        {transaction.title}
+                      </p>
+                      <p className="mt-2 text-xs text-slate-400">
+                        {transaction.payment_method || "_"}
+                      </p>
+                    </div>
                   </div>
                 </td>
               </tr>
