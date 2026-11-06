@@ -13,5 +13,14 @@ const initialForm = {
 
 const categories = {
   income: ["Salary", "Freelance", "Business", "Investment", "Other"],
-  expense: ["Food", "Transport", "Shopping", "Bills"],
+  expense: [
+    "Food",
+    "Transport",
+    "Shopping",
+    "Bills",
+    "Health",
+    "Education",
+    "Entertainment",
+    "Other",
+  ],
 };
