@@ -58,6 +58,21 @@ export default function TransactionTable({
                     </div>
                   </div>
                 </td>
+
+                <td className="px-4 py-4 text-sm text-slate-500">
+                  {transaction.category || "Other"}
+                </td>
+                <td className="px-4 py-4 text-sm text-slate-500">
+                  {transaction.transaction_date
+                    ? new Date(
+                        `${String(transaction.transaction_date).slice(0, 10)}T12:00:00`,
+                      ).toLocaleDateString("en-PK", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })
+                    : "_"}
+                </td>
               </tr>
             );
           })}
