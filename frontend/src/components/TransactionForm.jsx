@@ -120,6 +120,10 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             required
           />
         </label>
+
+        <label className="space-y-2 text-sm font-semibold text-slate-700">
+          <span>Amount</span>
+        </label>
       </div>
     </form>
   );
