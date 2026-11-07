@@ -123,6 +123,13 @@ export default function TransactionForm({ onSubmit, onCancel }) {
 
         <label className="space-y-2 text-sm font-semibold text-slate-700">
           <span>Amount</span>
+          <input
+            className={fieldClass}
+            name="amount"
+            type="number"
+            min="0.1"
+            step="0.01"
+          />
         </label>
       </div>
     </form>
