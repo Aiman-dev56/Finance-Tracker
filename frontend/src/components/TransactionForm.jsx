@@ -86,6 +86,16 @@ export default function TransactionForm({ onSubmit, onCancel }) {
           Record money coming in or going out.
         </p>
       </div>
+      {error && (
+        <div
+          role="alert"
+          className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-4 text-sm text-rose-700"
+        >
+          {error}
+        </div>
+      )}
+
+      <div></div>
     </form>
   );
 }
