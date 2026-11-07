@@ -108,6 +108,18 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             <option value="income">Income</option>
           </select>
         </label>
+
+        <label className="space-y-2 text-sm font-semibold text-slate-700">
+          <span>Title</span>
+          <input
+            className={fieldClass}
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            placeholder="e.g, Monthly Salary"
+            required
+          />
+        </label>
       </div>
     </form>
   );
