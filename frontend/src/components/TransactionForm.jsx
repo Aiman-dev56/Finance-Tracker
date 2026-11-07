@@ -135,6 +135,22 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             required
           />
         </label>
+
+        <label className="space-y-2 text-sm font-semibold text-slate-700">
+          <span>Category</span>
+          <select
+            className={fieldClass}
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+          >
+            {categories[form.type].map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
     </form>
   );
