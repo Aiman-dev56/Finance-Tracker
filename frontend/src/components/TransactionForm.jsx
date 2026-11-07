@@ -57,5 +57,22 @@ export default function TransactionForm({ onSubmit, onCancel }) {
     }
 
     setLoading(true);
+
+    try {
+      await onSubmit({
+        ...form,
+        title: form.title.trim(),
+        amount: Number(form.amount),
+      });
+
+      setForm({
+        ...initialForm,
+        transaction_date: new Date().toLocaleDateString("en-CA"),
+      });
+    } catch (error) {
+      setError(getErrorMessage(error));
+    } finally {
+      setLoading(false);
+    }
   }
 }
