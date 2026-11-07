@@ -95,7 +95,20 @@ export default function TransactionForm({ onSubmit, onCancel }) {
         </div>
       )}
 
-      <div></div>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <label className="space-y-2 text-sm font-semibold text-slate-700">
+          <span>Transaction type</span>
+          <select
+            className={fieldClass}
+            name="type"
+            value={form.type}
+            onChange={handleChange}
+          >
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </label>
+      </div>
     </form>
   );
 }
