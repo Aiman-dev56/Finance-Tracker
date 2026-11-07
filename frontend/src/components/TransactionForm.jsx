@@ -42,4 +42,20 @@ export default function TransactionForm({ onSubmit, onCancel }) {
       ...(name === "type" ? { category: categories[value][0] } : {}),
     }));
   }
+
+  async function handelSubmit(event) {
+    event.preventDefault();
+    setError("");
+
+    if (
+      !form.title.trim() ||
+      !Number.isFinite(Number(form.amount)) ||
+      Number(form.amount) <= 0
+    ) {
+      setError("Enter a title and an amount greater then zero.");
+      return;
+    }
+
+    setLoading(true);
+  }
 }
