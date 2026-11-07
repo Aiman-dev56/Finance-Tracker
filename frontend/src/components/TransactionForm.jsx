@@ -27,3 +27,19 @@ const categories = {
 
 const fieldClass =
   "w-full rounded-xl border border-slate-200 bg-white px-4 py-4 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:ring-4 focus:ring-blue-50 ";
+
+export default function TransactionForm({ onSubmit, onCancel }) {
+  const [form, setForm] = useState(initialForm);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setForm((previous) => ({
+      ...previous,
+      [name]: value,
+      ...(name === "type" ? { category: categories[value][0] } : {}),
+    }));
+  }
+}
