@@ -75,4 +75,17 @@ export default function TransactionForm({ onSubmit, onCancel }) {
       setLoading(false);
     }
   }
+
+  return (
+    <form onSubmit={handelSubmit} className="space-y-6">
+      <div>
+        <h2 className="font-heading text-xl font-extrabold text-slate-900">
+          Add Transaction
+        </h2>
+        <p className="mt-2 text-sm text-slate-500">
+          Record money coming in or going out.
+        </p>
+      </div>
+    </form>
+  );
 }
