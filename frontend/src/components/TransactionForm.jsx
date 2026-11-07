@@ -129,6 +129,10 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             type="number"
             min="0.1"
             step="0.01"
+            value={form.amount}
+            onChange={handleChange}
+            placeholder="0.00"
+            required
           />
         </label>
       </div>
