@@ -198,7 +198,15 @@ export default function TransactionForm({ onSubmit, onCancel }) {
       </div>
 
       <div className="flex flex-wrap justify-end gap-4 border-t border-slate-100 pt-6">
-        {onCancel && <button></button>}
+        {onCancel && (
+          <button
+            type="button"
+            onClick={onCancel}
+            className="rounded-xl border border-slate-200 px-6 py-4 text-sm font-bold text-slate-600 transition hover:bg-slate-50"
+          >
+            Cancel
+          </button>
+        )}
       </div>
     </form>
   );
