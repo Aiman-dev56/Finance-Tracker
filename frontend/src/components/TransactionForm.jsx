@@ -196,6 +196,10 @@ export default function TransactionForm({ onSubmit, onCancel }) {
           />
         </label>
       </div>
+
+      <div className="flex flex-wrap justify-end gap-4 border-t border-slate-100 pt-6">
+        {onCancel && <button></button>}
+      </div>
     </form>
   );
 }
