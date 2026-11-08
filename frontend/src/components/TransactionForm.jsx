@@ -207,6 +207,14 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             Cancel
           </button>
         )}
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="rounded-xl bg-brand px-6 py-4 text-sm font-bold text-white shadow-lg shadow-blue-100 transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {loading ? "Saving..." : "Save transaction"}
+        </button>
       </div>
     </form>
   );
