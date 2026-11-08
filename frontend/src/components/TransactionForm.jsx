@@ -151,6 +151,26 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             ))}
           </select>
         </label>
+
+        <label className="space-y-2 text-sm font-semibold text-slate-700">
+          <span>Payment Method</span>
+          <select
+            className={fieldClass}
+            name="payment_method"
+            value={form.payment_method}
+            onChange={handleChange}
+          >
+            {[
+              "cash",
+              "Bank Transafer",
+              "Debit Card",
+              "Credit Card",
+              "Mobile Wallet",
+            ].map((method) => (
+              <option key={method}>{method}</option>
+            ))}
+          </select>
+        </label>
       </div>
     </form>
   );
