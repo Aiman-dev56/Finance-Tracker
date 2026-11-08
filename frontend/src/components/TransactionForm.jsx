@@ -171,6 +171,18 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             ))}
           </select>
         </label>
+
+        <label className="space-y-2 text-sm font-semibold text-slate-700">
+          <span>Date</span>
+          <input
+            className={fieldClass}
+            name="transaction_date"
+            type="data"
+            value={form.transaction_date}
+            onChange={handleChange}
+            required
+          />
+        </label>
       </div>
     </form>
   );
