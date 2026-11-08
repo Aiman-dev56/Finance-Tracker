@@ -183,6 +183,18 @@ export default function TransactionForm({ onSubmit, onCancel }) {
             required
           />
         </label>
+
+        <label className="space-y-2 text-sm font-semibold text-slate-700 md:col-span-2">
+          <span>Notes (optional)</span>
+          <textarea
+            className={fieldClass}
+            name="notes"
+            value={form.notes}
+            onChange={handleChange}
+            placeholder="Add extra details..."
+            rows={4}
+          />
+        </label>
       </div>
     </form>
   );
