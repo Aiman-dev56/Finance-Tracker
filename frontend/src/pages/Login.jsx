@@ -35,6 +35,12 @@ export default function Login() {
       if (user) {
         localStorage.setItem("user", JSON.stringify(user));
       }
-    } catch (error) {}
+
+      navigate(location.state?.from || "/dashboard", { replace: true });
+    } catch (error) {
+      setError(getErrorMessage(error));
+    } finally {
+      setLoading(false);
+    }
   }
 }
