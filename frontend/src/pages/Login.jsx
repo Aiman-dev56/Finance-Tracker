@@ -20,5 +20,21 @@ export default function Login() {
     event.preventDefault();
     setLoading(true);
     setError("");
+
+    try {
+      const response = await api.post("/auth/login", { email, password });
+      const data = response.data;
+      const token = data.token || data.accessToken || data.data?.token;
+      const user = data.user || data.data?.user;
+
+      if (!token) {
+        throw new Error("The server did not return an authentication token.");
+      }
+      localStorage.setItem("token", token);
+
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+      }
+    } catch (error) {}
   }
 }
