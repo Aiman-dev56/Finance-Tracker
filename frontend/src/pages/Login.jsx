@@ -43,4 +43,20 @@ export default function Login() {
       setLoading(false);
     }
   }
+
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-100 px-4 py-10">
+      <section className="w-full max-w-md rounded-3xl border border-white bg-white p-6 shadow-2xl shadow-blue-100/60 sm:p-10">
+        <Link
+          to="/login"
+          className="mb-10 flex items-center justify-center gap-4 font-heading text-2xl font-extrabold tracking-tight text-slate-900"
+        >
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-white">
+            <Wallet size={26} />
+          </span>
+          FinTrack
+        </Link>
+      </section>
+    </main>
+  );
 }
