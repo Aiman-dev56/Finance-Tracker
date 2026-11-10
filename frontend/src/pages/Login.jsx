@@ -78,6 +78,21 @@ export default function Login() {
             {error}
           </p>
         )}
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <label className="block space-y-2 text-sm font-semibold text-slate-700">
+            <span>Email Address</span>
+            <input
+              className={inputClass}
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              placeholder="you@example.com"
+              autoComplete="email"
+              required
+            />
+          </label>
+        </form>
       </section>
     </main>
   );
