@@ -124,6 +124,13 @@ export default function Login() {
             {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
+
+        <p className="mt-7 text-center text-sm text-slate-500">
+          Don't have an Account?{""}
+          <Link to="register" className="font-bold text-brand hover:underline">
+            Create One
+          </Link>
+        </p>
       </section>
     </main>
   );
