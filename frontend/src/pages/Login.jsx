@@ -120,7 +120,9 @@ export default function Login() {
           <button
             disabled={loading}
             className="w-full rounded-xlbg-brandpx-4 py-4 text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover::bg-brand-dark disabled:opacity-60"
-          ></button>
+          >
+            {loading ? "Signing in..." : "Sign In"}
+          </button>
         </form>
       </section>
     </main>
