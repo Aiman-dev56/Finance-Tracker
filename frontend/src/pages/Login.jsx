@@ -105,6 +105,15 @@ export default function Login() {
                 autoComplete="Current-password"
                 required
               />
+
+              <button
+                type="button"
+                onClick={() => setShowPassword((value) => !value)}
+                aria-label={showPassword ? "Hide Passowrd" : "Show password"}
+                className="absolute inset-y-0 right-4 flex items-center text-slate-400 hover:text-slate-700"
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
             </span>
           </label>
         </form>
