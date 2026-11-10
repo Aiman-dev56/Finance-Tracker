@@ -92,6 +92,21 @@ export default function Login() {
               required
             />
           </label>
+
+          <label className="block space-y-2 text-sm font-semibold text-slate-700">
+            <span>Password</span>
+            <span className="relative block">
+              <input
+                className={`${inputClass} pr-12`}
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="Enter your password"
+                autoComplete="Current-password"
+                required
+              />
+            </span>
+          </label>
         </form>
       </section>
     </main>
