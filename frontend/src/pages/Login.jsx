@@ -66,7 +66,18 @@ export default function Login() {
           </p>
         </div>
 
-        {location.state?.message && <p className="mb-5"></p>}
+        {location.state?.message && (
+          <p className="mb-5">{location.state.message}</p>
+        )}
+
+        {error && (
+          <p
+            role="alert"
+            className="mb-6 rounded-xl bg-rose-50 p-4 text-sm text-rose-700"
+          >
+            {error}
+          </p>
+        )}
       </section>
     </main>
   );
