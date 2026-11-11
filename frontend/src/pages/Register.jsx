@@ -63,7 +63,11 @@ export default function Register() {
           FinTrack
         </Link>
 
-        <div></div>
+        <div className="mb-8 text-center">
+          <h1 className="font-heading text-3xl font-extrabold tracking-tight text-slate-900">
+            Create your Account
+          </h1>
+        </div>
       </section>
     </main>
   );
