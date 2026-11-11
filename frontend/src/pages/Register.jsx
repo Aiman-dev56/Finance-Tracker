@@ -49,4 +49,8 @@ export default function Register() {
       setLoading(false);
     }
   }
+
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-gradinet-to-br from-blue-50 via-slate-50 to-indigo-100 px-4 py-10"></main>
+  );
 }
