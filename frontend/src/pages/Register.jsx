@@ -67,7 +67,18 @@ export default function Register() {
           <h1 className="font-heading text-3xl font-extrabold tracking-tight text-slate-900">
             Create your Account
           </h1>
+          <p className="mt-4 text-sm leading-6 text-slate-500">
+            Start tracking your income and expenses.
+          </p>
         </div>
+        {error && (
+          <p
+            role="alert"
+            className="mb-6 rounded-xl bg-rose-50 p-4 text-sm text-rose-700"
+          >
+            {error}
+          </p>
+        )}
       </section>
     </main>
   );
