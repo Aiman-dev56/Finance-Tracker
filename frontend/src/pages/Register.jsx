@@ -119,6 +119,19 @@ export default function Register() {
               required
             />
           </label>
+
+          <label className="block space-y-2 text-sm font-semibold text-slate-700">
+            <span>Confirm Password</span>
+            <input
+              className={inputclass}
+              type="password"
+              value={confirmPassword}
+              onChange={(event) => setConfirmPassword(event.target.value)}
+              placeholder="Enter Password again"
+              autoComplete="new-password"
+              required
+            />
+          </label>
         </form>
       </section>
     </main>
