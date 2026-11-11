@@ -79,6 +79,33 @@ export default function Register() {
             {error}
           </p>
         )}
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <label className="block space-y-2 text-sm font-semibold text-slate-700">
+            <span>Full Name</span>
+            <input
+              className={inputclass}
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              placeholder="Your full name "
+              autoComplete="name"
+              required
+            />
+          </label>
+
+          <label className="block space-y-2 text-sm font-semibold text-slate-700">
+            <span>Email Address</span>
+            <input
+              className={inputclass}
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              placeholder="your@example.com"
+              autoComplete="email"
+              required
+            />
+          </label>
+        </form>
       </section>
     </main>
   );
