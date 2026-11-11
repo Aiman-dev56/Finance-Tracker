@@ -29,5 +29,24 @@ export default function Register() {
       setError("Password do not match.");
       return;
     }
+
+    setLoading(true);
+
+    try {
+      await api.post("/auth/register", {
+        name: name.trim(),
+        email: email.trim(),
+        password,
+      });
+
+      navigate("/login", {
+        replace: true,
+        state: { message: "Account created.Please sign in." },
+      });
+    } catch (error) {
+      setError(getErrorMessage(error));
+    } finally {
+      setLoading(false);
+    }
   }
 }
