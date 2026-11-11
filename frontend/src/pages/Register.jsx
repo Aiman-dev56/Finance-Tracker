@@ -56,7 +56,14 @@ export default function Register() {
         <Link
           to="/login"
           className="mb-8 flex items-center justify-center gap-4 font-heading text-2xl font-extrabold text-slate-900"
-        ></Link>
+        >
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-white">
+            <Wallet size={26} />
+          </span>
+          FinTrack
+        </Link>
+
+        <div></div>
       </section>
     </main>
   );
