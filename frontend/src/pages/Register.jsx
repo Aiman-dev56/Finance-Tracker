@@ -15,4 +15,19 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setError("");
+
+    if (password.length < 8) {
+      setError("Password must be 8 characters long.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Password do not match.");
+      return;
+    }
+  }
 }
