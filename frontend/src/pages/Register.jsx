@@ -105,6 +105,20 @@ export default function Register() {
               required
             />
           </label>
+
+          <label className="block space-y-2 text-sm font-semibold text-slate-700">
+            <span>Password</span>
+            <input
+              className={inputclass}
+              type="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              placeholder="At least 8 characters"
+              autoComplete="new-password"
+              minLength={8}
+              required
+            />
+          </label>
         </form>
       </section>
     </main>
