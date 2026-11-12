@@ -140,6 +140,13 @@ export default function Register() {
             {loading ? "Creating Account..." : "Create Account"}
           </button>
         </form>
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Already Registered?{" "}
+          <Link to="/login" className="font-bold text-brand hover:underline">
+            {" "}
+            Sign In
+          </Link>
+        </p>
       </section>
     </main>
   );
