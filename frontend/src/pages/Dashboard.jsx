@@ -29,4 +29,12 @@ export default function Dashboard() {
 
   const [transactions, setTransactions] = useState([]);
   const [summary, setSummary] = useState({});
+  const [loaidng, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  function logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login", { replace: true });
+  }
 }
