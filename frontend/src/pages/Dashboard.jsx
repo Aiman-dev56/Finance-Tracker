@@ -57,5 +57,33 @@ export default function Dashboard() {
         setLoading(false);
       }
     }
-  });
+
+    loadDashboard();
+  }, []);
+
+  const income = Number(summary.totalIncome ?? summary.total_income ?? 0);
+  const express = Number(summary.totalExpenses ?? summary.total_expenses ?? 0);
+  const balance = Number(summary.balance ?? income - expenses);
+
+  return (
+    <div className="min-h-screen bg-slate-50 md:pl-64">
+      <Sidebar onLogout={logout} />
+
+      <main className="mx-auto max-w-[1600px] px-4 pb-10 md:px-8">
+        <Header title="Dashboard" user={user} />
+
+        <section className="my-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <div>
+            <h2 className="font-heading text-xl font-extrabold text-slate-900">
+              Your financial overview
+            </h2>
+
+            <p className="mt-2 text-sm text-slate-500">
+              See how your money is coming in and going out.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
