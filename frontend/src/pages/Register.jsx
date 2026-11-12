@@ -132,6 +132,13 @@ export default function Register() {
               required
             />
           </label>
+
+          <button
+            disabled={loading}
+            className="mt-2 w-full rounded-xl bg-brand px-4 py-4 text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:bg-brand-dark disabled:opacity-60"
+          >
+            {loading ? "Creating Account..." : "Create Account"}
+          </button>
         </form>
       </section>
     </main>
