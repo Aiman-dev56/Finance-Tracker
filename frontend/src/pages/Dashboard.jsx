@@ -37,4 +37,25 @@ export default function Dashboard() {
     localStorage.removeItem("user");
     navigate("/login", { replace: true });
   }
+
+  useEffect(() => {
+    async function loadDashboard() {
+      setLoading(true);
+      setError("");
+
+      try {
+        const [summaryResponse, transactionsResponse] = await Promise.all([
+          api.get("/reports/summary"),
+          api.get("/transactions"),
+        ]);
+
+        setSummary(unwrapSummary(summaryResponse.data));
+        setTransactions(unwrapList(transactionsResponse.data).slice(0, 5));
+      } catch (error) {
+        setError(getErrorMessage(error));
+      } finally {
+        setLoading(false);
+      }
+    }
+  });
 }
