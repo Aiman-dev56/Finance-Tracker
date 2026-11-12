@@ -13,3 +13,20 @@ import Header from "../components/Header";
 import SummaryCard from "../components/SummaryCard";
 import TransactionTable from "../components/TransactionTable";
 import api, { getErrorMessage } from "../services/api";
+
+function unwrapList(data) {
+  if (Array.isArray(data)) return data;
+  return data.transactions || data.data?.transactions || data.data || [];
+}
+
+function unwrapSummary(data) {
+  return data.summary || data.data?.summary || data.data || data;
+}
+
+export default function Dashboard() {
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user") || "null");
+
+  const [transactions, setTransactions] = useState([]);
+  const [summary, setSummary] = useState({});
+}
