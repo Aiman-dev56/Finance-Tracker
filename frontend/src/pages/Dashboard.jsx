@@ -122,6 +122,14 @@ export default function Dashboard() {
                 color="green"
                 description="Money received"
               />
+              <SummaryCard
+                title="Total expenses"
+                amount={expenses}
+                icon={TrendingDown}
+                color="red"
+                description="Money spent"
+              />
+              <SummaryCard />
             </section>
           </>
         )}
