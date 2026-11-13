@@ -82,7 +82,24 @@ export default function Dashboard() {
               See how your money is coming in and going out.
             </p>
           </div>
+
+          <Link
+            to="/transactions"
+            className="inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-4 text-sm font-bold text-white shadow-lg shadow-blue-100 transition hover:bg-brand-dark"
+          >
+            <Plus size={18} />
+            Add Transaction
+          </Link>
         </section>
+
+        {error && (
+          <div
+            role="alert"
+            className="mb-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700"
+          >
+            {error}
+          </div>
+        )}
       </main>
     </div>
   );
