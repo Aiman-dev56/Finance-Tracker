@@ -130,6 +130,14 @@ export default function Dashboard() {
                 description="Money spent"
               />
               <SummaryCard />
+
+              <SummaryCard
+                title="Net savings"
+                amount={balance}
+                icon={PiggyBank}
+                color="purple"
+                description="Current net amount"
+              />
             </section>
           </>
         )}
