@@ -107,7 +107,22 @@ export default function Dashboard() {
           </div>
         ) : (
           <>
-            <section></section>
+            <section className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <SummaryCard
+                title="Total balance"
+                amount={balance}
+                icon={Wallet}
+                color="blue"
+                description="Income minus expenses"
+              />
+              <SummaryCard
+                title="Total income"
+                amount={income}
+                icon={TrendingUp}
+                color="green"
+                description="Money received"
+              />
+            </section>
           </>
         )}
       </main>
