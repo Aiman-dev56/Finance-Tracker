@@ -139,6 +139,26 @@ export default function Dashboard() {
                 description="Current net amount"
               />
             </section>
+
+            <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <div>
+                  <h2 className="font-heading text-lg font-extrabold text-slate-900">
+                    Recent Transactions
+                  </h2>
+                  <p className="mt-2 text-sm text-slate-500">
+                    Your latest financial activity
+                  </p>
+                </div>
+
+                <Link
+                  to="/transactions"
+                  className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-brand hover:underline"
+                >
+                  View All <ArrowRight size={16} />
+                </Link>
+              </div>
+            </section>
           </>
         )}
       </main>
