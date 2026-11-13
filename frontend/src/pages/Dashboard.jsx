@@ -100,6 +100,16 @@ export default function Dashboard() {
             {error}
           </div>
         )}
+
+        {loaidng ? (
+          <div className="rounded-2xl border border-slate-200 bg-white p-12 text-center text-sm text-slate-500">
+            Loading your finances...
+          </div>
+        ) : (
+          <>
+            <section></section>
+          </>
+        )}
       </main>
     </div>
   );
