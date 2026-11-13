@@ -158,6 +158,11 @@ export default function Dashboard() {
                   View All <ArrowRight size={16} />
                 </Link>
               </div>
+
+              <TransactionTable
+                transactions={transactions}
+                showActions={false}
+              />
             </section>
           </>
         )}
