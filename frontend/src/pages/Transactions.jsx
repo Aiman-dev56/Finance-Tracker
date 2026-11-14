@@ -50,4 +50,7 @@ export default function Transactions() {
 
 async function addTransaction(transaction) {
   await api.post("/transactions", transaction);
+  setShowForm(false);
+  setNotice("Transaction added successfully.");
+  await loadTransactions();
 }
