@@ -73,5 +73,23 @@ async function deleteTransaction(id) {
 
 const filteredTransactions =
   filter === "all"
-    ? transactions
-    : transactions.filter((item) => item.type === filter);
+    ? Transactions
+    : Transactions.filter((item) => item.type === filter);
+
+return (
+  <div className="min-h-screen bg-slate-50 md:pl-64">
+    <Sidebar onLogout={logout} />
+
+    <min className="mx-auto max-w-[1600px] px-4 pb-10 md:px-8">
+      <Header title="Transactions" user={user} />
+
+      <section className="my-8 flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-center">
+        <div>
+          <h2 className="font-heading text-xl font-extrabold text-slate-900">
+            Manage your transactions
+          </h2>
+        </div>
+      </section>
+    </min>
+  </div>
+);
