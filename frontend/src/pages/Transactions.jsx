@@ -54,3 +54,7 @@ async function addTransaction(transaction) {
   setNotice("Transaction added successfully.");
   await loadTransactions();
 }
+
+async function deleteTransaction(id) {
+if(!Window.confirm(""))  
+}
