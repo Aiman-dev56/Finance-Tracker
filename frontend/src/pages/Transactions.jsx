@@ -56,5 +56,15 @@ async function addTransaction(transaction) {
 }
 
 async function deleteTransaction(id) {
-if(!Window.confirm(""))  
+  if (!Window.confirm("Are you sure you want to delete this transaction?")) {
+    return;
+  }
+  setError("");
+  setNotice("");
+
+  try {
+    await api.delete(`/transactions/${id}`);
+    setNotice("Transaction deleted successfully.");
+    await loadTransactions();
+  } catch (error) {}
 }
