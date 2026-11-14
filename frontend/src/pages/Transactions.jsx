@@ -66,5 +66,12 @@ async function deleteTransaction(id) {
     await api.delete(`/transactions/${id}`);
     setNotice("Transaction deleted successfully.");
     await loadTransactions();
-  } catch (error) {}
+  } catch (error) {
+    setError(getErrorMessage(error));
+  }
 }
+
+const filteredTransactions =
+  filter === "all"
+    ? transactions
+    : transactions.filter((item) => item.type === filter);
