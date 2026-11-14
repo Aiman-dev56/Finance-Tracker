@@ -47,3 +47,7 @@ export default function Transactions() {
     loadTransactions();
   }, [loadTransactions]);
 }
+
+async function addTransaction(transaction) {
+  await api.post("/transactions", transaction);
+}
