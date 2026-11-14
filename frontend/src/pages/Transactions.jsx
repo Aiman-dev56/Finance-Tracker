@@ -130,9 +130,14 @@ return (
       )}
 
       <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-        <div className="flex items-center gap-2 font-heading text-lg font-extrabold text-slate-900">
-          <ReceiptText size={20} className="text-brand" />
-          All Transactions
+        <div>
+          <h2 className="flex items-center gap-2 font-heading text-lg font-extrabold text-slate-900">
+            <ReceiptText size={20} className="text-brand" />
+            All Transactions
+          </h2>
+          <p className="mt-2 text-sm text-slate-500">
+            {filteredTransactions.length} transactions shown
+          </p>
         </div>
       </section>
     </min>
