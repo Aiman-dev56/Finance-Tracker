@@ -165,7 +165,10 @@ return (
             Loading Transactions...
           </div>
         ) : (
-          <TransactionTable />
+          <TransactionTable
+            transactions={filteredTransactions}
+            onDelete={deleteTransaction}
+          />
         )}
       </section>
     </min>
