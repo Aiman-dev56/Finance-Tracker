@@ -92,7 +92,33 @@ return (
             Keep track of every rupee you earn and spend.
           </p>
         </div>
+
+        <button
+          onClick={() => setShowForm((value) => !value)}
+          className="inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-4 text-sm font-bold text-white shadow-lg shadow-blue-100 transition hover:bg-brand-dark"
+        >
+          {showForm ? <X size={18} /> : <Plus size={18} />}
+          {showForm ? "Close form" : "Add transaction"}
+        </button>
       </section>
+
+      {error && (
+        <div
+          role="alert"
+          className="mb-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700"
+        >
+          {error}
+        </div>
+      )}
+
+      {notice && (
+        <div
+          role="status"
+          className="mb-6 rounded-xl border border-emerald-50 p-4 text-sm text-emerald-700"
+        >
+          {notice}
+        </div>
+      )}
     </min>
   </div>
 );
