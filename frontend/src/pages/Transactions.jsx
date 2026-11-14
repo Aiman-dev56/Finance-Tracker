@@ -119,6 +119,15 @@ return (
           {notice}
         </div>
       )}
+
+      {showForm && (
+        <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <TransactionForm
+            onSubmit={addTransaction}
+            onCancel={() => setShowForm(false)}
+          />
+        </section>
+      )}
     </min>
   </div>
 );
