@@ -130,32 +130,34 @@ return (
       )}
 
       <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-        <div>
-          <h2 className="flex items-center gap-2 font-heading text-lg font-extrabold text-slate-900">
-            <ReceiptText size={20} className="text-brand" />
-            All Transactions
-          </h2>
-          <p className="mt-2 text-sm text-slate-500">
-            {filteredTransactions.length} transactions shown
-          </p>
-        </div>
+        <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+          <div>
+            <h2 className="flex items-center gap-2 font-heading text-lg font-extrabold text-slate-900">
+              <ReceiptText size={20} className="text-brand" />
+              All Transactions
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">
+              {filteredTransactions.length} transactions shown
+            </p>
+          </div>
 
-        <div className="flex flex-wrap gap-2 rounded-xl bg-slate-100 p-2">
-          {["all", "income", "expense"].map((value) => (
-            <button
-              key={value}
-              onClick={() => setFilter(value)}
-              className={`rounded-lg py-2 text-xs font-bold transition ${
-                filter === value
-                  ? "bg-white text-brand shadow-sm"
-                  : "text-slate-500 hover:text-slate-800"
-              }`}
-            >
-              {value === "all"
-                ? "All"
-                : value.charAt(0).toUpperCase() + value.slice(1)}
-            </button>
-          ))}
+          <div className="flex flex-wrap gap-2 rounded-xl bg-slate-100 p-2">
+            {["all", "income", "expense"].map((value) => (
+              <button
+                key={value}
+                onClick={() => setFilter(value)}
+                className={`rounded-lg py-2 text-xs font-bold transition ${
+                  filter === value
+                    ? "bg-white text-brand shadow-sm"
+                    : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                {value === "all"
+                  ? "All"
+                  : value.charAt(0).toUpperCase() + value.slice(1)}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
     </min>
