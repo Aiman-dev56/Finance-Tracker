@@ -139,6 +139,24 @@ return (
             {filteredTransactions.length} transactions shown
           </p>
         </div>
+
+        <div className="flex flex-wrap gap-2 rounded-xl bg-slate-100 p-2">
+          {["all", "income", "expense"].map((value) => (
+            <button
+              key={value}
+              onClick={() => setFilter(value)}
+              className={`rounded-lg py-2 text-xs font-bold transition ${
+                filter === value
+                  ? "bg-white text-brand shadow-sm"
+                  : "text-slate-500 hover:text-slate-800"
+              }`}
+            >
+              {value === "all"
+                ? "All"
+                : value.charAt(0).toUpperCase() + value.slice(1)}
+            </button>
+          ))}
+        </div>
       </section>
     </min>
   </div>
