@@ -88,6 +88,9 @@ return (
           <h2 className="font-heading text-xl font-extrabold text-slate-900">
             Manage your transactions
           </h2>
+          <p className="mt-2 text-sm text-slate-500">
+            Keep track of every rupee you earn and spend.
+          </p>
         </div>
       </section>
     </min>
