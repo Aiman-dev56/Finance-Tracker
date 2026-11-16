@@ -146,6 +146,13 @@ export default function Reports() {
                 color="red"
                 description="Money spent"
               />
+              <SummaryCard
+                title="Net balance"
+                amount={balance}
+                icon={Wallet}
+                color="blue"
+                description="Income minus expenses"
+              />
             </section>
           </>
         )}
