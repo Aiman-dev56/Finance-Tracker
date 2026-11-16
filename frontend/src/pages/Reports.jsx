@@ -139,6 +139,13 @@ export default function Reports() {
                 color="green"
                 description="Money received"
               />
+              <SummaryCard
+                title="Total Expenses"
+                amount={expenses}
+                icon={TrendingDown}
+                color="red"
+                description="Money spent"
+              />
             </section>
           </>
         )}
