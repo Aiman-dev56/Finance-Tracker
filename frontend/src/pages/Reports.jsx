@@ -79,7 +79,26 @@ export default function Reports() {
             reportData.data?.monthlyBreakdown ||
             [],
         );
-      } catch (error) {}
+
+        setCategories(
+          reportData.categories ||
+            reportData.data?.categories ||
+            reportData.data?.categoryBreakdown ||
+            [],
+        );
+      } catch (error) {
+        setError(getErrorMeesage(error));
+      } finally {
+        setLoading(false);
+      }
     }
-  });
+
+    loadReports();
+  }, []);
+
+  const income = Number(summary.totalIncome ?? summary.total_income ?? 0);
+  const expenses = Number(summary.totalExpenses ?? summary.total_expenses ?? 0);
+  const balance = Number(summary.balance ?? income - expenses);
+
+  return <div></div>;
 }
