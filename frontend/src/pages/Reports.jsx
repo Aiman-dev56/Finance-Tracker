@@ -100,5 +100,22 @@ export default function Reports() {
   const expenses = Number(summary.totalExpenses ?? summary.total_expenses ?? 0);
   const balance = Number(summary.balance ?? income - expenses);
 
-  return <div></div>;
+  return (
+    <div className="min-h-screen bg-slate-50 md:pl-64">
+      <Sidebar onLogout={logout} />
+
+      <main className="mx-auto max-w[1600px] px-4 pb-10 md:px-8">
+        <Header title="Reports" user={user} />
+
+        <section className="my-8">
+          <h2 className="font-heading text-xl font-extrabold text-slate-900">
+            Financial Reports
+          </h2>
+          <p className="mt-2 text-sm text-slate-500">
+            Understand your income, spending, and financial trends.
+          </p>
+        </section>
+      </main>
+    </div>
+  );
 }
