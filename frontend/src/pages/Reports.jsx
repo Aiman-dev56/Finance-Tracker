@@ -72,6 +72,13 @@ export default function Reports() {
             summaryData.data ||
             summaryData,
         );
+
+        setMonthly(
+          reportData.monthly ||
+            reportData.data?.monthly ||
+            reportData.data?.monthlyBreakdown ||
+            [],
+        );
       } catch (error) {}
     }
   });
