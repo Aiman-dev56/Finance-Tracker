@@ -115,6 +115,15 @@ export default function Reports() {
             Understand your income, spending, and financial trends.
           </p>
         </section>
+
+        {error && (
+          <div
+            role="alert"
+            className="mb-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700"
+          >
+            {error}
+          </div>
+        )}
       </main>
     </div>
   );
