@@ -167,16 +167,31 @@ export default function Reports() {
                 </div>
 
                 {monthly.length > 0 ? (
-                    <div className="h-[300px] w-full">
-                        <Responsivecontainer width="100%" height="100%">
-                            <BarChart data={monthly}>
-                                <CartesianGrid 
-                                strokeDasharray="3 3"
-                                vertical={false}
-                                />
-                            </BarChart>
-                        </Responsivecontainer>
-                    </div>
+                  <div className="h-[300px] w-full">
+                    <Responsivecontainer width="100%" height="100%">
+                      <BarChart data={monthly}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis dataKey="month" tick={{ fontSize: 12 }} />
+                        <YAxis tick={{ fontSize: 12 }} />
+                        <Tooltip formatter={(value) => money(value)} />
+                        <Legend />
+                        <Bar
+                          dataKey="income"
+                          name="Income"
+                          fill="#16a34a"
+                          radius={[5, 5, 0, 0]}
+                        />
+                        <Bar
+                          dataKey="expenses"
+                          name="Expenses"
+                          fill="#e11d48"
+                          radius={[5, 5, 0, 0]}
+                        />
+                      </BarChart>
+                    </Responsivecontainer>
+                  </div>
+                ) : (
+                  <div className=""></div>
                 )}
               </article>
             </section>
