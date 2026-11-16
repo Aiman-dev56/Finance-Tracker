@@ -124,6 +124,18 @@ export default function Reports() {
             {error}
           </div>
         )}
+
+        {loading ? (
+          <div className="rounded-2xl border border-slate-200 bg-white p-12 text-center text-sm text-slate-500">
+            Loading reports...
+          </div>
+        ) : (
+          <>
+            <section className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <SummaryCard />
+            </section>
+          </>
+        )}
       </main>
     </div>
   );
