@@ -161,8 +161,23 @@ export default function Reports() {
                   <h2 className="font-heading text-lg font-extrabold text-slate-900">
                     Monthly overview
                   </h2>
-                  <p></p>
+                  <p className="mt-2 text-sm text-slate-500">
+                    Income compared with expenses.
+                  </p>
                 </div>
+
+                {monthly.length > 0 ? (
+                    <div className="h-[300px] w-full">
+                        <Responsivecontainer width="100%" height="100%">
+                            <BarChart data={monthly}>
+                                <CartesianGrid 
+                                strokeDasharray="3 3"
+                                vertical={false}
+                                />
+                            </BarChart>
+                        </Responsivecontainer>
+                    </div>
+                )}
               </article>
             </section>
           </>
