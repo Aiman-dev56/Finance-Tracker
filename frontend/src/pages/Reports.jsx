@@ -28,3 +28,15 @@ const chartColors = [
   "#0891b2",
   "#64748b",
 ];
+
+const money = (value) =>
+  new Intl.NumberFormat("en-PK", {
+    style: "currency",
+    currency: "PKR",
+    maximumFractionDigits: 0,
+  }).format(Number(value) || 0);
+
+export default function Reports() {
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user") || "null");
+}
