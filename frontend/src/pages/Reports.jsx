@@ -132,7 +132,13 @@ export default function Reports() {
         ) : (
           <>
             <section className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              <SummaryCard />
+              <SummaryCard
+                title="Total income"
+                amount={income}
+                icon={TrendingUp}
+                color="green"
+                description="Money received"
+              />
             </section>
           </>
         )}
