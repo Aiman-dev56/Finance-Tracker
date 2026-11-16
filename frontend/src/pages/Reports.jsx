@@ -39,4 +39,16 @@ const money = (value) =>
 export default function Reports() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user") || "null");
+
+  const [summary, setSummary] = useState({});
+  const [monthly, setMonthly] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  function logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login", { replace: true });
+  }
 }
