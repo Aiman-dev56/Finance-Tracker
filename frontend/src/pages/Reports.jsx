@@ -51,4 +51,28 @@ export default function Reports() {
     localStorage.removeItem("user");
     navigate("/login", { replace: true });
   }
+
+  useEffect(() => {
+    async function loadReports() {
+      setLoading(true);
+      setError("");
+
+      try {
+        const [summaryResponse, reportsResponse] = await Promise.all([
+          api.get("/reports/summary"),
+          api.get("/reports"),
+        ]);
+
+        const summaryData = summaryResponse.data;
+        const reportData = reportsResponse.data;
+
+        setSummary(
+          summaryData.summary ||
+            summaryData.data?.summary ||
+            summaryData.data ||
+            summaryData,
+        );
+      } catch (error) {}
+    }
+  });
 }
