@@ -156,7 +156,14 @@ export default function Reports() {
             </section>
 
             <section className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-              <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6"></article>
+              <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+                <div className="mb-6">
+                  <h2 className="font-heading text-lg font-extrabold text-slate-900">
+                    Monthly overview
+                  </h2>
+                  <p></p>
+                </div>
+              </article>
             </section>
           </>
         )}
