@@ -6,4 +6,12 @@ import Transactions from "./pages/Transactions";
 import Reports from "./pages/Reports";
 import ProtectedRoute from "./components/ProtectedRoutes";
 
-export default function App() {}
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
