@@ -218,7 +218,12 @@ export default function Reports() {
                         cx="50%"
                         cy="45%"
                         outerRadius={90}
-                        label={({category}) => category}/>
+                        label={({category}) => category}>
+                          {categories.map((item, index) => (
+                            <Cell key={item.category || index}
+                            fill={chartColors[index % chartColors.length]}/>
+                          ))}
+                          </Pie>
                       </PieChart>
                     </Responsivecontainer>
                   </div>
