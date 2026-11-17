@@ -206,6 +206,24 @@ export default function Reports() {
                     See where your money goes.
                   </p>
                 </div>
+
+                {categories.length > 0 ? (
+                  <div className="h-[300px] w-full">
+                    <Responsivecontainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie  
+                        data={categories}
+                        dataKey="amount"
+                        nameKey="category"
+                        cx="50%"
+                        cy="45%"
+                        outerRadius={90}
+                        label={({category}) => category}/>
+                      </PieChart>
+                    </Responsivecontainer>
+                  </div>
+                )
+                }
               </article>
             </section>
           </>
