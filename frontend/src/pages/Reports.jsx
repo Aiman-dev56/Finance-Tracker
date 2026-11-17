@@ -211,24 +211,30 @@ export default function Reports() {
                   <div className="h-[300px] w-full">
                     <Responsivecontainer width="100%" height="100%">
                       <PieChart>
-                        <Pie  
-                        data={categories}
-                        dataKey="amount"
-                        nameKey="category"
-                        cx="50%"
-                        cy="45%"
-                        outerRadius={90}
-                        label={({category}) => category}>
+                        <Pie
+                          data={categories}
+                          dataKey="amount"
+                          nameKey="category"
+                          cx="50%"
+                          cy="45%"
+                          outerRadius={90}
+                          label={({ category }) => category}
+                        >
                           {categories.map((item, index) => (
-                            <Cell key={item.category || index}
-                            fill={chartColors[index % chartColors.length]}/>
+                            <Cell
+                              key={item.category || index}
+                              fill={chartColors[index % chartColors.length]}
+                            />
                           ))}
-                          </Pie>
+                        </Pie>
+                        <Tooltip formatter={(value) => money(value)} />
+                        <Legend />
                       </PieChart>
                     </Responsivecontainer>
                   </div>
-                )
-                }
+                ) : (
+                  <div className="flex"></div>
+                )}
               </article>
             </section>
           </>
