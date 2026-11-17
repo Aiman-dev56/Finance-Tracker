@@ -1,1 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import Transactions from "./pages/Transactions";
+import Reports from "./pages/Reports";
+import ProtectedRoute from "./components/ProtectedRoutes";
+
+export default function App() {}
