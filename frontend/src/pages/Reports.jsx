@@ -202,6 +202,9 @@ export default function Reports() {
                   <h2 className="font-heading text-lg font-extrabold text-slate-900">
                     Expenses by category
                   </h2>
+                  <p className="mt-2 text-sm text-slate-500">
+                    See where your money goes.
+                  </p>
                 </div>
               </article>
             </section>
