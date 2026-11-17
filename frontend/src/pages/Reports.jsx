@@ -196,6 +196,10 @@ export default function Reports() {
                   </div>
                 )}
               </article>
+
+              <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+                <div className="mb-6"></div>
+              </article>
             </section>
           </>
         )}
