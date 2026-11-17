@@ -198,7 +198,11 @@ export default function Reports() {
               </article>
 
               <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-                <div className="mb-6"></div>
+                <div className="mb-6">
+                  <h2 className="font-heading text-lg font-extrabold text-slate-900">
+                    Expenses by category
+                  </h2>
+                </div>
               </article>
             </section>
           </>
